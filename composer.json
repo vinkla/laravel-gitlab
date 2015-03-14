@@ -1,0 +1,41 @@
+{
+    "name": "vinkla/gitlab",
+    "description": "Laravel wrapper for the GitLab API client.",
+    "homepage": "https://github.com/vinkla/gitlab",
+    "license": "MIT",
+    "keywords": ["laravel", "gitlab", "git", "api"],
+    "authors": [
+        {
+            "name": "Vincent Klaiber",
+            "email": "hello@vinkla.com",
+            "homepage": "https://vinkla.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.7",
+        "illuminate/contracts": "~5.0",
+        "illuminate/support": "~5.0",
+        "graham-campbell/manager": "~2.0",
+        "m4tthumphrey/php-gitlab-api": "~7.0"
+    },
+    "require-dev": {
+        "graham-campbell/testbench": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vinkla\\GitLab\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vinkla\\Tests\\GitLab\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
