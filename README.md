@@ -68,10 +68,10 @@ Here you can see an example of just how simple this package is to use. Out of th
 // You can alias this in config/app.php.
 use Vinkla\GitLab\Facades\GitLab;
 
-GitLab::initIndex('contacts');
+GitLab::api('projects')->all();
 // We're done here - how easy was that, it just works!
 
-GitLab::getSettings();
+GitLab::api('users')->all(true);
 // This example is simple and there are far more methods available.
 ```
 
