@@ -1,14 +1,12 @@
 {
     "name": "vinkla/gitlab",
     "description": "Laravel wrapper for the GitLab API client.",
-    "homepage": "https://github.com/vinkla/gitlab",
     "license": "MIT",
     "keywords": ["laravel", "gitlab", "git", "api"],
     "authors": [
         {
             "name": "Vincent Klaiber",
-            "email": "hello@vinkla.com",
-            "homepage": "https://vinkla.com"
+            "email": "hello@vinkla.com"
         }
     ],
     "require": {
