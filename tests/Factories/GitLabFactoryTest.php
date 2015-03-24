@@ -1,10 +1,24 @@
 <?php
 
+/*
+ * This file is part of Laravel GitLab.
+ *
+ * (c) Vincent Klaiber <hello@vinkla.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Vinkla\Tests\GitLab\Factories;
 
 use Vinkla\GitLab\Factories\GitLabFactory;
 use Vinkla\Tests\GitLab\AbstractTestCase;
 
+/**
+ * This is the GitLab factory test class.
+ *
+ * @author Vincent Klaiber <hello@vinkla.com>
+ */
 class GitLabFactoryTest extends AbstractTestCase
 {
     public function testMakeStandard()

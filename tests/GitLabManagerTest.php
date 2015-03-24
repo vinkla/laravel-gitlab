@@ -1,11 +1,25 @@
 <?php
 
+/*
+ * This file is part of Laravel GitLab.
+ *
+ * (c) Vincent Klaiber <hello@vinkla.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Vinkla\Tests\GitLab;
 
 use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
 use Mockery;
 use Vinkla\GitLab\GitLabManager;
 
+/**
+ * This is the GitLab manager test class.
+ *
+ * @author Vincent Klaiber <hello@vinkla.com>
+ */
 class GitLabManagerTest extends AbstractTestBenchTestCase
 {
     public function testCreateConnection()

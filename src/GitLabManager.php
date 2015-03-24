@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Laravel GitLab.
+ *
+ * (c) Vincent Klaiber <hello@vinkla.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Vinkla\GitLab;
 
 use GrahamCampbell\Manager\AbstractManager;
@@ -7,7 +16,7 @@ use Illuminate\Contracts\Config\Repository;
 use Vinkla\GitLab\Factories\GitLabFactory;
 
 /**
- * Simple API wrapper for Gitlab
+ * This is the GitLab manager class.
  *
  * @property-read \Gitlab\Api\Groups $groups
  * @property-read \Gitlab\Api\Issues $issues
