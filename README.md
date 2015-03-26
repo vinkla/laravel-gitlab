@@ -135,4 +135,4 @@ There are other classes in this package that are not documented here. This is be
 
 ## License
 
-The Laravel GitLab package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Laravel GitLab is licensed under [The MIT License (MIT)](LICENSE).
