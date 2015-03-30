@@ -25,7 +25,7 @@ GitLab::api('users')->show($id);
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-composer require vinkla/gitlab:~1.0
+composer require vinkla/gitlab
 ```
 
 Add the service provider to ```config/app.php``` in the `providers` array.
