@@ -29,17 +29,32 @@ class GitLabFactoryTest extends AbstractTestCase
             'token' => 'your-token',
             'base_url' => 'http://git.yourdomain.com/api/v3/',
         ]);
+
         $this->assertInstanceOf('GitLab\Client', $return);
     }
 
     /**
      * @expectedException \InvalidArgumentException
      */
-    public function testMakeWithoutClientId()
+    public function testMakeWithoutToken()
     {
         $factory = $this->getGitLabFactory();
 
-        $factory->make([]);
+        $factory->make([
+            'base_url' => 'http://git.yourdomain.com/api/v3/',
+        ]);
+    }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testMakeWithoutBaseUrl()
+    {
+        $factory = $this->getGitLabFactory();
+
+        $factory->make([
+            'token' => 'your-token',
+        ]);
     }
 
     protected function getGitLabFactory()

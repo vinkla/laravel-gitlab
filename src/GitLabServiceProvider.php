@@ -39,7 +39,9 @@ class GitLabServiceProvider extends ServiceProvider
     protected function setupConfig()
     {
         $source = realpath(__DIR__.'/../config/gitlab.php');
+
         $this->publishes([$source => config_path('gitlab.php')]);
+
         $this->mergeConfigFrom($source, 'gitlab');
     }
 

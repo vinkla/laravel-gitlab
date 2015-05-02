@@ -39,17 +39,19 @@ use Vinkla\GitLab\Factories\GitLabFactory;
 class GitLabManager extends AbstractManager
 {
     /**
-     * The GitLab factory.
+     * The factory instance.
      *
      * @var \Vinkla\GitLab\Factories\GitLabFactory
      */
     private $factory;
 
     /**
-     * Setup the GitLab factory.
+     * Create a new GitLab manager instance.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
      * @param \Vinkla\GitLab\Factories\GitLabFactory $factory
+     *
+     * @return void
      */
     public function __construct(Repository $config, GitLabFactory $factory)
     {
@@ -82,6 +84,8 @@ class GitLabManager extends AbstractManager
 
     /**
      * Get the factory instance.
+     *
+     * @return \Vinkla\GitLab\Factories\GitLabFactory
      */
     public function getFactory()
     {
