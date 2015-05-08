@@ -100,7 +100,7 @@ class GitLabServiceProvider extends ServiceProvider
     {
         return [
             'gitlab',
-            'gitlab.factory'
+            'gitlab.factory',
         ];
     }
 }

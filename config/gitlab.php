@@ -47,6 +47,6 @@ return [
             'base_url' => 'http://git.yourdomain.com/api/v3/',
         ],
 
-    ]
+    ],
 
 ];
