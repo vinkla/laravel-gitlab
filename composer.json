@@ -1,6 +1,6 @@
 {
     "name": "vinkla/gitlab",
-    "description": "Laravel wrapper for the GitLab API client.",
+    "description": "A GitLab bridge for Laravel",
     "license": "MIT",
     "keywords": ["laravel", "gitlab", "git", "api"],
     "authors": [
