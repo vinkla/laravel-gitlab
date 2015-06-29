@@ -40,7 +40,9 @@ class GitLabServiceProvider extends ServiceProvider
     {
         $source = realpath(__DIR__.'/../config/gitlab.php');
 
-        $this->publishes([$source => config_path('gitlab.php')]);
+        if (class_exists('Illuminate\Foundation\Application', false)) {
+            $this->publishes([$source => config_path('gitlab.php')]);
+        }
 
         $this->mergeConfigFrom($source, 'gitlab');
     }
