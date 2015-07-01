@@ -24,7 +24,7 @@ class ServiceProviderTest extends AbstractTestCase
 
     public function testGitLabFactoryIsInjectable()
     {
-        $this->assertIsInjectable('Vinkla\GitLab\Factories\GitLabFactory');
+        $this->assertIsInjectable('Vinkla\GitLab\GitLabFactory');
     }
 
     public function testGitLabManagerIsInjectable()

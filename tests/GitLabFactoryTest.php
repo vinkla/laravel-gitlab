@@ -9,10 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Vinkla\Tests\GitLab\Factories;
+namespace Vinkla\Tests\GitLab;
 
-use Vinkla\GitLab\Factories\GitLabFactory;
-use Vinkla\Tests\GitLab\AbstractTestCase;
+use Vinkla\GitLab\GitLabFactory;
 
 /**
  * This is the GitLab factory test class.

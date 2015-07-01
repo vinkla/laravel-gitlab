@@ -13,7 +13,6 @@ namespace Vinkla\GitLab;
 
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
-use Vinkla\GitLab\Factories\GitLabFactory;
 
 /**
  * This is the GitLab manager class.
@@ -41,7 +40,7 @@ class GitLabManager extends AbstractManager
     /**
      * The factory instance.
      *
-     * @var \Vinkla\GitLab\Factories\GitLabFactory
+     * @var \Vinkla\GitLab\GitLabFactory
      */
     private $factory;
 
@@ -49,7 +48,7 @@ class GitLabManager extends AbstractManager
      * Create a new GitLab manager instance.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
-     * @param \Vinkla\GitLab\Factories\GitLabFactory $factory
+     * @param \Vinkla\GitLab\GitLabFactory $factory
      *
      * @return void
      */
@@ -85,7 +84,7 @@ class GitLabManager extends AbstractManager
     /**
      * Get the factory instance.
      *
-     * @return \Vinkla\GitLab\Factories\GitLabFactory
+     * @return \Vinkla\GitLab\GitLabFactory
      */
     public function getFactory()
     {

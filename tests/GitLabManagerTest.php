@@ -43,7 +43,7 @@ class GitLabManagerTest extends AbstractTestBenchTestCase
     protected function getManager(array $config)
     {
         $repository = Mockery::mock('Illuminate\Contracts\Config\Repository');
-        $factory = Mockery::mock('Vinkla\GitLab\Factories\GitLabFactory');
+        $factory = Mockery::mock('Vinkla\GitLab\GitLabFactory');
 
         $manager = new GitLabManager($repository, $factory);
 

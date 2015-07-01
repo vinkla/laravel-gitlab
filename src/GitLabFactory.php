@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Vinkla\GitLab\Factories;
+namespace Vinkla\GitLab;
 
 use Gitlab\Client;
 

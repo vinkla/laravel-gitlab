@@ -68,10 +68,10 @@ class GitLabServiceProvider extends ServiceProvider
     protected function registerFactory(Application $app)
     {
         $app->singleton('gitlab.factory', function () {
-            return new Factories\GitLabFactory();
+            return new GitLabFactory();
         });
 
-        $app->alias('gitlab.factory', 'Vinkla\GitLab\Factories\GitLabFactory');
+        $app->alias('gitlab.factory', 'Vinkla\GitLab\GitLabFactory');
     }
 
     /**
