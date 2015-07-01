@@ -12,6 +12,8 @@
 namespace Vinkla\Tests\GitLab;
 
 use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
+use Vinkla\GitLab\GitLabFactory;
+use Vinkla\GitLab\GitLabManager;
 
 /**
  * This is the service provider test class.
@@ -24,11 +26,11 @@ class ServiceProviderTest extends AbstractTestCase
 
     public function testGitLabFactoryIsInjectable()
     {
-        $this->assertIsInjectable('Vinkla\GitLab\GitLabFactory');
+        $this->assertIsInjectable(GitLabFactory::class);
     }
 
     public function testGitLabManagerIsInjectable()
     {
-        $this->assertIsInjectable('Vinkla\GitLab\GitLabManager');
+        $this->assertIsInjectable(GitLabManager::class);
     }
 }

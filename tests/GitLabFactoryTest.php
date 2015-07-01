@@ -11,6 +11,7 @@
 
 namespace Vinkla\Tests\GitLab;
 
+use Gitlab\Client;
 use Vinkla\GitLab\GitLabFactory;
 
 /**
@@ -29,7 +30,7 @@ class GitLabFactoryTest extends AbstractTestCase
             'base_url' => 'http://git.yourdomain.com/api/v3/',
         ]);
 
-        $this->assertInstanceOf('GitLab\Client', $return);
+        $this->assertInstanceOf(Client::class, $return);
     }
 
     /**

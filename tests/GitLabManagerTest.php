@@ -11,8 +11,11 @@
 
 namespace Vinkla\Tests\GitLab;
 
+use Gitlab\Client;
 use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
+use Illuminate\Contracts\Config\Repository;
 use Mockery;
+use Vinkla\GitLab\GitLabFactory;
 use Vinkla\GitLab\GitLabManager;
 
 /**
@@ -35,15 +38,15 @@ class GitLabManagerTest extends AbstractTestBenchTestCase
 
         $return = $manager->connection();
 
-        $this->assertInstanceOf('GitLab\Client', $return);
+        $this->assertInstanceOf(Client::class, $return);
 
         $this->assertArrayHasKey('gitlab', $manager->getConnections());
     }
 
     protected function getManager(array $config)
     {
-        $repository = Mockery::mock('Illuminate\Contracts\Config\Repository');
-        $factory = Mockery::mock('Vinkla\GitLab\GitLabFactory');
+        $repository = Mockery::mock(Repository::class);
+        $factory = Mockery::mock(GitLabFactory::class);
 
         $manager = new GitLabManager($repository, $factory);
 
@@ -53,7 +56,7 @@ class GitLabManagerTest extends AbstractTestBenchTestCase
         $config['name'] = 'gitlab';
 
         $manager->getFactory()->shouldReceive('make')->once()
-            ->with($config)->andReturn(Mockery::mock('GitLab\Client'));
+            ->with($config)->andReturn(Mockery::mock(Client::class));
 
         return $manager;
     }

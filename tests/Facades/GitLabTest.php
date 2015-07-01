@@ -12,6 +12,8 @@
 namespace Vinkla\Tests\GitLab\Facades;
 
 use GrahamCampbell\TestBenchCore\FacadeTrait;
+use Vinkla\GitLab\Facades\GitLab;
+use Vinkla\GitLab\GitLabManager;
 use Vinkla\Tests\GitLab\AbstractTestCase;
 
 /**
@@ -40,7 +42,7 @@ class GitLabTest extends AbstractTestCase
      */
     protected function getFacadeClass()
     {
-        return 'Vinkla\GitLab\Facades\GitLab';
+        return GitLab::class;
     }
 
     /**
@@ -50,6 +52,6 @@ class GitLabTest extends AbstractTestCase
      */
     protected function getFacadeRoot()
     {
-        return 'Vinkla\GitLab\GitLabManager';
+        return GitLabManager::class;
     }
 }

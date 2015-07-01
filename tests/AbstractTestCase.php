@@ -12,6 +12,7 @@
 namespace Vinkla\Tests\GitLab;
 
 use GrahamCampbell\TestBench\AbstractPackageTestCase;
+use Vinkla\GitLab\GitLabServiceProvider;
 
 /**
  * This is the abstract test case class.
@@ -29,6 +30,6 @@ abstract class AbstractTestCase extends AbstractPackageTestCase
      */
     protected function getServiceProviderClass($app)
     {
-        return 'Vinkla\GitLab\GitLabServiceProvider';
+        return GitLabServiceProvider::class;
     }
 }

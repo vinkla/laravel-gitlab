@@ -71,7 +71,7 @@ class GitLabServiceProvider extends ServiceProvider
             return new GitLabFactory();
         });
 
-        $app->alias('gitlab.factory', 'Vinkla\GitLab\GitLabFactory');
+        $app->alias('gitlab.factory', GitLabFactory::class);
     }
 
     /**
@@ -90,7 +90,7 @@ class GitLabServiceProvider extends ServiceProvider
             return new GitLabManager($config, $factory);
         });
 
-        $app->alias('gitlab', 'Vinkla\GitLab\GitLabManager');
+        $app->alias('gitlab', GitLabManager::class);
     }
 
     /**
