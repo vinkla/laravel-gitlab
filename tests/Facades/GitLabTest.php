@@ -11,7 +11,7 @@
 
 namespace Vinkla\Tests\GitLab\Facades;
 
-use GrahamCampbell\TestBench\Traits\FacadeTestCaseTrait;
+use GrahamCampbell\TestBenchCore\FacadeTrait;
 use Vinkla\Tests\GitLab\AbstractTestCase;
 
 /**
@@ -21,7 +21,7 @@ use Vinkla\Tests\GitLab\AbstractTestCase;
  */
 class GitLabTest extends AbstractTestCase
 {
-    use FacadeTestCaseTrait;
+    use FacadeTrait;
 
     /**
      * Get the facade accessor.
