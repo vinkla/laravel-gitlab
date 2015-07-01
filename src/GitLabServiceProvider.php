@@ -11,6 +11,7 @@
 
 namespace Vinkla\GitLab;
 
+use Gitlab\Client;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
@@ -56,6 +57,7 @@ class GitLabServiceProvider extends ServiceProvider
     {
         $this->registerFactory($this->app);
         $this->registerManager($this->app);
+        $this->registerBindings($this->app);
     }
 
     /**
@@ -94,6 +96,24 @@ class GitLabServiceProvider extends ServiceProvider
     }
 
     /**
+     * Register the bindings.
+     *
+     * @param \Illuminate\Contracts\Foundation\Application $app
+     *
+     * @return void
+     */
+    protected function registerBindings(Application $app)
+    {
+        $app->bind('gitlab.connection', function ($app) {
+            $manager = $app['gitlab'];
+
+            return $manager->connection();
+        });
+
+        $app->alias('gitlab.connection', Client::class);
+    }
+
+    /**
      * Get the services provided by the provider.
      *
      * @return string[]
@@ -103,6 +123,7 @@ class GitLabServiceProvider extends ServiceProvider
         return [
             'gitlab',
             'gitlab.factory',
+            'gitlab.connection',
         ];
     }
 }
