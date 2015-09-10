@@ -67,7 +67,7 @@ class GitLabFactory
     {
         $client = new Client($config['base_url']);
 
-        $client->authenticate($config['token'], 'http_token');
+        $client->authenticate($config['token'], empty($config['auth_method']) ? 'http_token' : $config['auth_method']);
 
         return $client;
     }
