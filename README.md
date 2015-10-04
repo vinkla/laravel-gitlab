@@ -32,13 +32,13 @@ composer require vinkla/gitlab
 Add the service provider to ```config/app.php``` in the `providers` array.
 
 ```php
-'Vinkla\GitLab\GitLabServiceProvider'
+Vinkla\GitLab\GitLabServiceProvider::class
 ```
 
 If you want you can use the [facade](http://laravel.com/docs/facades). Add the reference in ```config/app.php``` to your aliases array.
 
 ```php
-'GitLab' => 'Vinkla\GitLab\Facades\GitLab'
+'GitLab' => Vinkla\GitLab\Facades\GitLab::class
 ```
 
 ## Configuration
