@@ -38,12 +38,14 @@ return [
     'connections' => [
 
         'main' => [
+            'auth_method' => 'http_token',
             'token' => 'your-token',
             'base_url' => 'http://git.yourdomain.com/api/v3/',
         ],
 
         'alternative' => [
-            'token' => 'your-token',
+            'auth_method' => 'oauth_token',
+            'token' => 'your-oauth-token',
             'base_url' => 'http://git.yourdomain.com/api/v3/',
         ],
 

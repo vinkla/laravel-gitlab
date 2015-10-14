@@ -45,7 +45,7 @@ class GitLabFactory
      */
     protected function getConfig(array $config)
     {
-        $keys = ['token', 'base_url'];
+        $keys = ['token', 'base_url', 'auth_method'];
 
         foreach ($keys as $key) {
             if (!array_key_exists($key, $config)) {
@@ -67,7 +67,7 @@ class GitLabFactory
     {
         $client = new Client($config['base_url']);
 
-        $client->authenticate($config['token'], 'http_token');
+        $client->authenticate($config['token'], $config['auth_method']);
 
         return $client;
     }
