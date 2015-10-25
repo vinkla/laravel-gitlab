@@ -45,15 +45,11 @@ class GitLabFactory
      */
     protected function getConfig(array $config)
     {
-        $keys = ['token', 'base_url'];
-
-        foreach ($keys as $key) {
-            if (!array_key_exists($key, $config)) {
-                throw new \InvalidArgumentException('The GitLab client requires configuration.');
-            }
+        if (!array_key_exists('token', $config)) {
+            throw new \InvalidArgumentException('The GitLab client requires configuration.');
         }
 
-        return array_only($config, $keys);
+        return array_only($config, ['token', 'base_url', 'method', 'sudo']);
     }
 
     /**
@@ -65,9 +61,13 @@ class GitLabFactory
      */
     protected function getClient(array $config)
     {
-        $client = new Client($config['base_url']);
+        $client = new Client(array_get($config, 'base_url', 'http://git.yourdomain.com/api/v3/'));
 
-        $client->authenticate($config['token'], 'http_token');
+        $client->authenticate(
+            $config['token'],
+            array_get($config, 'method', Client::AUTH_HTTP_TOKEN),
+            array_get($config, 'sudo', null)
+        );
 
         return $client;
     }

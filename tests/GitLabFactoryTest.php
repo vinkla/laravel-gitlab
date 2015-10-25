@@ -45,18 +45,6 @@ class GitLabFactoryTest extends AbstractTestCase
         ]);
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
-    public function testMakeWithoutBaseUrl()
-    {
-        $factory = $this->getGitLabFactory();
-
-        $factory->make([
-            'token' => 'your-token',
-        ]);
-    }
-
     protected function getGitLabFactory()
     {
         return new GitLabFactory();

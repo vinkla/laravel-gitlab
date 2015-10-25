@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.1.1 (released 2015-10-25)
+
+- Update configuration
+
 ## 2.1.0 (released 2015-10-07)
 
 - Improved Lumen support
