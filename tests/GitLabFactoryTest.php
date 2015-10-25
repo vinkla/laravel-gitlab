@@ -26,6 +26,7 @@ class GitLabFactoryTest extends AbstractTestCase
         $factory = $this->getGitLabFactory();
 
         $return = $factory->make([
+            'auth_method' => 'http_token',
             'token' => 'your-token',
             'base_url' => 'http://git.yourdomain.com/api/v3/',
         ]);
@@ -41,6 +42,7 @@ class GitLabFactoryTest extends AbstractTestCase
         $factory = $this->getGitLabFactory();
 
         $factory->make([
+            'auth_method' => 'http_token',
             'base_url' => 'http://git.yourdomain.com/api/v3/',
         ]);
     }
@@ -53,7 +55,32 @@ class GitLabFactoryTest extends AbstractTestCase
         $factory = $this->getGitLabFactory();
 
         $factory->make([
+            'auth_method' => 'http_token',
             'token' => 'your-token',
+        ]);
+    }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testMakeWithoutAuthMethod()
+    {
+        $factory = $this->getGitLabFactory();
+
+        $factory->make([
+            'token' => 'your-token',
+            'base_url' => 'http://git.yourdomain.com/api/v3/',
+        ]);
+    }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testMakeWithoutSettings()
+    {
+        $factory = $this->getGitLabFactory();
+
+        $factory->make([
         ]);
     }
 
