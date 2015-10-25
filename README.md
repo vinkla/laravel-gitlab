@@ -3,7 +3,7 @@ Laravel GitLab
 
 ![laravel-gitlab](https://cloud.githubusercontent.com/assets/499192/7440610/e030579c-f0bf-11e4-8c78-fdf74626de2b.png)
 
-Laravel [GitLab](https://gitlab.com/) is a [GitLab](https://gitlab.com/) bridge for Laravel 5 using the [GitLab API package](https://github.com/m4tthumphrey/php-gitlab-api).
+Laravel [GitLab](https://gitlab.com/) is a [GitLab](https://gitlab.com/) bridge for Laravel using the [GitLab API package](https://github.com/m4tthumphrey/php-gitlab-api).
 
 ```php
 // Fetch projects.
