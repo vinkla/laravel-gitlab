@@ -39,13 +39,11 @@ return [
 
         'main' => [
             'token' => 'your-token',
-            'method' => 'http_token',
             'base_url' => 'http://git.yourdomain.com/api/v3/',
         ],
 
         'alternative' => [
             'token' => 'your-token',
-            'method' => 'http_token',
             'base_url' => 'http://git.yourdomain.com/api/v3/',
         ],
 
