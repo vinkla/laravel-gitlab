@@ -12,6 +12,7 @@
 namespace Vinkla\GitLab;
 
 use Gitlab\Client;
+use InvalidArgumentException;
 
 /**
  * This is the GitLab factory class.
@@ -45,8 +46,12 @@ class GitLabFactory
      */
     protected function getConfig(array $config)
     {
-        if (!array_key_exists('token', $config)) {
-            throw new \InvalidArgumentException('The GitLab client requires configuration.');
+        $keys = ['token', 'base_url'];
+
+        foreach ($keys as $key) {
+            if (!array_key_exists($key, $config)) {
+                throw new InvalidArgumentException("Missing configuration key [$key].");
+            }
         }
 
         return array_only($config, ['token', 'base_url', 'method', 'sudo']);
@@ -61,7 +66,7 @@ class GitLabFactory
      */
     protected function getClient(array $config)
     {
-        $client = new Client(array_get($config, 'base_url', 'http://git.yourdomain.com/api/v3/'));
+        $client = new Client($config['base_url']);
 
         $client->authenticate(
             $config['token'],

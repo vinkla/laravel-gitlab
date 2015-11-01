@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 2.1.1 (released 2015-10-25)
+## 2.2.0 (released 2015-11-01)
 
 - Update configuration
 
