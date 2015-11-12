@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.3.0 (upcoming)
+
+- Laravel 5.2 support
+
 ## 2.2.0 (released 2015-11-01)
 
 - Update configuration
