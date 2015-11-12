@@ -3,6 +3,7 @@
 ## 2.3.0 (upcoming)
 
 - Laravel 5.2 support
+- Update dependencies
 
 ## 2.2.0 (released 2015-11-01)
 
