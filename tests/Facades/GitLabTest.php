@@ -46,7 +46,7 @@ class GitLabTest extends AbstractTestCase
     }
 
     /**
-     * Get the facade route.
+     * Get the facade root.
      *
      * @return string
      */
