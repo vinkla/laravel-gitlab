@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.3.1 (released 2016-01-17)
+
+- Lumen 5.2 support
+
 ## 2.3.0 (released 2015-11-14)
 
 - Laravel 5.2 support
