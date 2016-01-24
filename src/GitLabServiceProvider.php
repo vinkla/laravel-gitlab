@@ -31,24 +31,22 @@ class GitLabServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->setupConfig($this->app);
+        $this->setupConfig();
     }
 
     /**
      * Setup the config.
      *
-     * @param \Illuminate\Contracts\Container\Container $app
-     *
      * @return void
      */
-    protected function setupConfig(Application $app)
+    protected function setupConfig()
     {
         $source = realpath(__DIR__.'/../config/gitlab.php');
 
-        if ($app instanceof LaravelApplication && $app->runningInConsole()) {
+        if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
             $this->publishes([$source => config_path('gitlab.php')]);
-        } elseif ($app instanceof LumenApplication) {
-            $app->configure('gitlab');
+        } elseif ($this->app instanceof LumenApplication) {
+            $this->app->configure('gitlab');
         }
 
         $this->mergeConfigFrom($source, 'gitlab');
