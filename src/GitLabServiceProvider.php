@@ -12,7 +12,7 @@
 namespace Vinkla\GitLab;
 
 use Gitlab\Client;
-use Illuminate\Contracts\Container\Container as Application;
+use Illuminate\Contracts\Container\Container;
 use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Lumen\Application as LumenApplication;
@@ -59,62 +59,56 @@ class GitLabServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerFactory($this->app);
-        $this->registerManager($this->app);
-        $this->registerBindings($this->app);
+        $this->registerFactory();
+        $this->registerManager();
+        $this->registerBindings();
     }
 
     /**
      * Register the factory class.
      *
-     * @param \Illuminate\Contracts\Container\Container $app
-     *
      * @return void
      */
-    protected function registerFactory(Application $app)
+    protected function registerFactory()
     {
-        $app->singleton('gitlab.factory', function () {
+        $this->app->singleton('gitlab.factory', function () {
             return new GitLabFactory();
         });
 
-        $app->alias('gitlab.factory', GitLabFactory::class);
+        $this->app->alias('gitlab.factory', GitLabFactory::class);
     }
 
     /**
      * Register the manager class.
      *
-     * @param \Illuminate\Contracts\Container\Container $app
-     *
      * @return void
      */
-    protected function registerManager(Application $app)
+    protected function registerManager()
     {
-        $app->singleton('gitlab', function ($app) {
+        $this->app->singleton('gitlab', function (Container $app) {
             $config = $app['config'];
             $factory = $app['gitlab.factory'];
 
             return new GitLabManager($config, $factory);
         });
 
-        $app->alias('gitlab', GitLabManager::class);
+        $this->app->alias('gitlab', GitLabManager::class);
     }
 
     /**
      * Register the bindings.
      *
-     * @param \Illuminate\Contracts\Container\Container $app
-     *
      * @return void
      */
-    protected function registerBindings(Application $app)
+    protected function registerBindings()
     {
-        $app->bind('gitlab.connection', function ($app) {
+        $this->app->bind('gitlab.connection', function (Container $app) {
             $manager = $app['gitlab'];
 
             return $manager->connection();
         });
 
-        $app->alias('gitlab.connection', Client::class);
+        $this->app->alias('gitlab.connection', Client::class);
     }
 
     /**
