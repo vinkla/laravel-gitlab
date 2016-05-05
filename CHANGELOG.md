@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.4.0 (released 2016-05-05)
+
+- Added laravel 5.3 support
+
 ## 2.3.1 (released 2016-01-30)
 
 - Improved service provider
