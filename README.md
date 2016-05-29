@@ -17,6 +17,7 @@ GitLab::api('users')->show($id);
 ```
 
 [![Build Status](https://img.shields.io/travis/vinkla/gitlab/master.svg?style=flat)](https://travis-ci.org/vinkla/gitlab)
+[![StyleCI](https://styleci.io/repos/32235069/shield?style=flat)](https://styleci.io/repos/32235069)
 [![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/vinkla/gitlab.svg?style=flat)](https://scrutinizer-ci.com/g/vinkla/gitlab/code-structure)
 [![Quality Score](https://img.shields.io/scrutinizer/g/vinkla/gitlab.svg?style=flat)](https://scrutinizer-ci.com/g/vinkla/gitlab)
 [![Latest Version](https://img.shields.io/github/release/vinkla/gitlab.svg?style=flat)](https://github.com/vinkla/gitlab/releases)
