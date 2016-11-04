@@ -1,9 +1,8 @@
-Laravel GitLab
-==============
+# Laravel GitLab
 
 ![laravel-gitlab](https://cloud.githubusercontent.com/assets/499192/7440610/e030579c-f0bf-11e4-8c78-fdf74626de2b.png)
 
-Laravel [GitLab](https://gitlab.com/) is a [GitLab](https://gitlab.com/) bridge for Laravel using the [GitLab API package](https://github.com/m4tthumphrey/php-gitlab-api).
+> A [GitLab](https://github.com/m4tthumphrey/php-gitlab-api) bridge for Laravel.
 
 ```php
 // Fetch projects.
@@ -18,12 +17,12 @@ GitLab::api('users')->show($id);
 
 [![Build Status](https://img.shields.io/travis/vinkla/laravel-gitlab/master.svg?style=flat)](https://travis-ci.org/vinkla/laravel-gitlab)
 [![StyleCI](https://styleci.io/repos/32235069/shield?style=flat)](https://styleci.io/repos/32235069)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/vinkla/gitlab.svg?style=flat)](https://scrutinizer-ci.com/g/vinkla/gitlab/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/vinkla/gitlab.svg?style=flat)](https://scrutinizer-ci.com/g/vinkla/gitlab)
+[![Coverage Status](https://img.shields.io/codecov/c/github/vinkla/laravel-gitlab.svg?style=flat)](https://codecov.io/github/vinkla/laravel-gitlab)
 [![Latest Version](https://img.shields.io/github/release/vinkla/gitlab.svg?style=flat)](https://github.com/vinkla/gitlab/releases)
 [![License](https://img.shields.io/packagist/l/vinkla/gitlab.svg?style=flat)](https://packagist.org/packages/vinkla/gitlab)
 
 ## Installation
+
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
@@ -75,6 +74,7 @@ This facade will dynamically pass static method calls to the `gitlab` object in 
 This class contains no public methods of interest. This class should be added to the providers array in `config/app.php`. This class will setup ioc bindings.
 
 ### Examples
+
 Here you can see an example of just how simple this package is to use. Out of the box, the default adapter is `main`. After you enter your authentication details in the config file, it will just work:
 
 ```php
@@ -133,8 +133,9 @@ App::make('Foo')->bar();
 ```
 
 ## Documentation
+
 There are other classes in this package that are not documented here. This is because the package is a Laravel wrapper of [the official GitLab package](https://github.com/m4tthumphrey/php-gitlab-api).
 
 ## License
 
-Laravel GitLab is licensed under [The MIT License (MIT)](LICENSE).
+[MIT](LICENSE) © [Vincent Klaiber](https://vinkla.com)
