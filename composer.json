@@ -18,7 +18,7 @@
         "m4tthumphrey/php-gitlab-api": "^7.15"
     },
     "require-dev": {
-        "graham-campbell/testbench": "^3.2",
+        "graham-campbell/testbench": "^3.3",
         "mockery/mockery": "^0.9.5",
         "phpunit/phpunit": "^5.7"
     },
