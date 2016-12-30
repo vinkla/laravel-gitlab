@@ -11,6 +11,7 @@
 
 namespace Vinkla\GitLab;
 
+use Gitlab\Client;
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
 
@@ -64,9 +65,9 @@ class GitLabManager extends AbstractManager
      *
      * @param array $config
      *
-     * @return mixed
+     * @return \Gitlab\Client
      */
-    protected function createConnection(array $config)
+    protected function createConnection(array $config): Client
     {
         return $this->factory->make($config);
     }
@@ -76,7 +77,7 @@ class GitLabManager extends AbstractManager
      *
      * @return string
      */
-    protected function getConfigName()
+    protected function getConfigName(): string
     {
         return 'gitlab';
     }
@@ -86,7 +87,7 @@ class GitLabManager extends AbstractManager
      *
      * @return \Vinkla\GitLab\GitLabFactory
      */
-    public function getFactory()
+    public function getFactory(): GitLabFactory
     {
         return $this->factory;
     }

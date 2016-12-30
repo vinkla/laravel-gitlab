@@ -28,7 +28,7 @@ class GitLabFactory
      *
      * @return \Gitlab\Client
      */
-    public function make(array $config)
+    public function make(array $config): Client
     {
         $config = $this->getConfig($config);
 
@@ -42,9 +42,9 @@ class GitLabFactory
      *
      * @throws \InvalidArgumentException
      *
-     * @return string
+     * @return array
      */
-    protected function getConfig(array $config)
+    protected function getConfig(array $config): array
     {
         $keys = ['token', 'base_url'];
 
@@ -64,7 +64,7 @@ class GitLabFactory
      *
      * @return \Gitlab\Client
      */
-    protected function getClient(array $config)
+    protected function getClient(array $config): Client
     {
         $client = new Client($config['base_url']);
 
