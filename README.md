@@ -1,6 +1,6 @@
 # Laravel GitLab
 
-![laravel-gitlab](https://cloud.githubusercontent.com/assets/499192/7440610/e030579c-f0bf-11e4-8c78-fdf74626de2b.png)
+[![laravel-gitlab](https://cloud.githubusercontent.com/assets/499192/24038988/ed13ea72-0b03-11e7-9068-ad06ba660a72.png)](https://about.gitlab.com)
 
 > A [GitLab](https://github.com/m4tthumphrey/php-gitlab-api) bridge for Laravel.
 
@@ -8,7 +8,7 @@
 // Fetch projects.
 $gitlab->api('projects')->all();
 
-// Create Issues.
+// Create issues.
 $gitlab->api('issues')->create($id, $params);
 
 // Want to use the facade?
