@@ -41,9 +41,13 @@ If you want you can use the [facade](http://laravel.com/docs/facades). Add the r
 'GitLab' => Vinkla\GitLab\Facades\GitLab::class
 ```
 
-## Configuration
+## Default Configuration
 
-Laravel GitLab requires connection configuration. To get started, you'll need to publish all vendor assets:
+You can easily configure Laravel GitLab by setting the `GITLAB_TOKEN` and `GITLAB_BASE_URL` environment variables. This is recommended if your organization uses a single GitLab server.
+
+## Custom Configuration
+
+If you'd like to override the default config, you'll need to publish all vendor assets:
 
 ```bash
 $ php artisan vendor:publish

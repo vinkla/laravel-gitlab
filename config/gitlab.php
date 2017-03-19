@@ -40,8 +40,8 @@ return [
     'connections' => [
 
         'main' => [
-            'token' => 'your-token',
-            'base_url' => 'http://git.yourdomain.com/api/v3/',
+            'token' => env('GITLAB_TOKEN', 'your-token'),
+            'base_url' => env('GITLAB_BASE_URL', 'http://git.yourdomain.com/api/v3/'),
         ],
 
         'alternative' => [
