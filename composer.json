@@ -38,6 +38,14 @@
     "extra": {
         "branch-alias": {
             "dev-master": "2.6-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Vinkla\\GitLab\\GitLabServiceProvider"
+            ],
+            "aliases": {
+                "GitLab": "Vinkla\\GitLab\\Facades\\GitLab"
+            }
         }
     },
     "minimum-stability": "dev",
