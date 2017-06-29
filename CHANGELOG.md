@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.0.0 (upcoming)
+
+- Updated gitlab package
+
 ## 2.6.0 (released 2017-01-01)
 
 - Added laravel 5.4 support
