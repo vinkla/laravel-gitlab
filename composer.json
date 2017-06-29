@@ -15,7 +15,7 @@
         "illuminate/contracts": "5.3.* || 5.4.*",
         "illuminate/support": "5.3.* || 5.4.*",
         "graham-campbell/manager": "^2.5",
-        "m4tthumphrey/php-gitlab-api": "^7.15"
+        "m4tthumphrey/php-gitlab-api": "^8.0"
     },
     "require-dev": {
         "graham-campbell/testbench": "^3.3",
