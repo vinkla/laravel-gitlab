@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 4.0.0 (upcoming)
+
+- Updated gitlab package
+- Updated base_url config to url
+
 ## 3.0.0 (released 2017-08-07)
 
 - Updated gitlab package
