@@ -116,17 +116,17 @@ use Vinkla\GitLab\GitLabManager;
 
 class Foo
 {
-	protected $gitlab;
-
-	public function __construct(GitLabManager $gitlab)
-	{
-		$this->gitlab = $gitlab;
-	}
-
-	public function bar()
-	{
-		$this->gitlab->api('users')->all(true);
-	}
+    protected $gitlab;
+    
+    public function __construct(GitLabManager $gitlab)
+    {
+        $this->gitlab = $gitlab;
+    }
+    
+    public function bar()
+    {
+        $this->gitlab->api('users')->all(true);
+    }
 }
 
 App::make('Foo')->bar();

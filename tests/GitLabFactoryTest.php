@@ -29,7 +29,7 @@ class GitLabFactoryTest extends AbstractTestCase
 
         $return = $factory->make([
             'token' => 'your-token',
-            'base_url' => 'http://git.yourdomain.com/api/v3/',
+            'url' => 'https://git.yourdomain.com',
         ]);
 
         $this->assertInstanceOf(Client::class, $return);
@@ -43,14 +43,14 @@ class GitLabFactoryTest extends AbstractTestCase
         $factory = $this->getGitLabFactory();
 
         $factory->make([
-            'base_url' => 'http://git.yourdomain.com/api/v3/',
+            'url' => 'https://git.yourdomain.com',
         ]);
     }
 
     /**
      * @expectedException \InvalidArgumentException
      */
-    public function testMakeWithoutBaseUrl()
+    public function testMakeWithoutUrl()
     {
         $factory = $this->getGitLabFactory();
 

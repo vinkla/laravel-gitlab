@@ -17,14 +17,14 @@ use Gitlab\Client;
 use InvalidArgumentException;
 
 /**
- * This is the GitLab factory class.
+ * This is the gitlab factory class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
  */
 class GitLabFactory
 {
     /**
-     * Make a new GitLab client.
+     * Make a new gitlab client.
      *
      * @param array $config
      *
@@ -48,7 +48,7 @@ class GitLabFactory
      */
     protected function getConfig(array $config): array
     {
-        $keys = ['token', 'base_url'];
+        $keys = ['token', 'url'];
 
         foreach ($keys as $key) {
             if (!array_key_exists($key, $config)) {
@@ -56,7 +56,7 @@ class GitLabFactory
             }
         }
 
-        return array_only($config, ['token', 'base_url', 'method', 'sudo']);
+        return array_only($config, ['token', 'url', 'method', 'sudo']);
     }
 
     /**
@@ -68,11 +68,11 @@ class GitLabFactory
      */
     protected function getClient(array $config): Client
     {
-        $client = new Client($config['base_url']);
+        $client = Client::create($config['url']);
 
         $client->authenticate(
             $config['token'],
-            array_get($config, 'method', Client::AUTH_HTTP_TOKEN),
+            array_get($config, 'method', Client::AUTH_URL_TOKEN),
             array_get($config, 'sudo', null)
         );
 

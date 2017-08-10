@@ -15,12 +15,13 @@
         "illuminate/contracts": "5.3.* || 5.4.* || 5.5.*",
         "illuminate/support": "5.3.* || 5.4.* || 5.5.*",
         "graham-campbell/manager": "^3.0",
-        "m4tthumphrey/php-gitlab-api": "^8.0"
+        "m4tthumphrey/php-gitlab-api": "^9.0"
     },
     "require-dev": {
         "graham-campbell/analyzer": "^1.1",
         "graham-campbell/testbench": "^4.0",
         "mockery/mockery": "dev-master#c90a17247147543081e4d00f46911e422b49e583",
+        "php-http/guzzle6-adapter": "^1.0",
         "phpunit/phpunit": "^6.3"
     },
     "autoload": {
@@ -38,7 +39,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "3.0-dev"
+            "dev-master": "4.0-dev"
         },
         "laravel": {
             "providers": [

@@ -18,23 +18,7 @@ use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
 
 /**
- * This is the GitLab manager class.
- *
- * @property-read \Gitlab\Api\Groups $groups
- * @property-read \Gitlab\Api\Issues $issues
- * @property-read \Gitlab\Api\MergeRequests $merge_requests
- * @property-read \Gitlab\Api\MergeRequests $mr
- * @property-read \Gitlab\Api\Milestones $milestones
- * @property-read \Gitlab\Api\Milestones $ms
- * @property-read \Gitlab\Api\ProjectNamespaces $namespaces
- * @property-read \Gitlab\Api\ProjectNamespaces $ns
- * @property-read \Gitlab\Api\Projects $projects
- * @property-read \Gitlab\Api\Repositories $repositories
- * @property-read \Gitlab\Api\Repositories $repo
- * @property-read \Gitlab\Api\Snippets $snippets
- * @property-read \Gitlab\Api\SystemHooks $hooks
- * @property-read \Gitlab\Api\SystemHooks $system_hooks
- * @property-read \Gitlab\Api\Users $users
+ * This is the gitlab manager class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
  */
@@ -48,7 +32,7 @@ class GitLabManager extends AbstractManager
     private $factory;
 
     /**
-     * Create a new GitLab manager instance.
+     * Create a new gitlab manager instance.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
      * @param \Vinkla\GitLab\GitLabFactory $factory

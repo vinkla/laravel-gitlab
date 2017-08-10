@@ -41,12 +41,12 @@ return [
 
         'main' => [
             'token' => 'your-token',
-            'base_url' => 'http://git.yourdomain.com/api/v3/',
+            'url' => 'https://git.yourdomain.com',
         ],
 
         'alternative' => [
             'token' => 'your-token',
-            'base_url' => 'http://git.yourdomain.com/api/v3/',
+            'url' => 'https://git.yourdomain.com',
         ],
 
     ],
