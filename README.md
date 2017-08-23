@@ -23,10 +23,12 @@ GitLab::api('users')->show($id);
 
 ## Installation
 
-Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
+Laravel GitLab is decoupled from any library sending HTTP requests (like Guzzle), instead it uses an abstraction called [HTTPlug](http://httplug.io) which provides the http layer used to send requests to exchange rate services. This gives you the flexibility to choose what HTTP client and PSR-7 implementation you want to use.
+
+Read more about the benefits of this and about what different HTTP clients you may use in the [HTTPlug documentation](http://docs.php-http.org/en/latest/httplug/users.html). Below is an example using [Guzzle 6](http://docs.guzzlephp.org/en/latest/index.html):
 
 ```bash
-$ composer require vinkla/gitlab
+$ composer require vinkla/gitlab php-http/guzzle6-adapter
 ```
 
 Add the service provider to `config/app.php` in the `providers` array, or if you're using Laravel 5.5, this can be done via the automatic package discovery.
