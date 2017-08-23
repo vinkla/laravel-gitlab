@@ -1,8 +1,9 @@
 # CHANGELOG
 
-## 4.0.0 (upcoming)
+## 4.0.0 (released 2017-08-23)
 
-- Updated gitlab package
+- Added gitlab api 4.0 support
+- Added httplug support
 - Updated base_url config to url
 
 ## 3.0.0 (released 2017-08-07)
