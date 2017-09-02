@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.1.0 (released 2017-09-02)
+
+- Removed laravel 5.3 and 5.4 support
+
 ## 4.0.0 (released 2017-08-23)
 
 - Added gitlab api 4.0 support
