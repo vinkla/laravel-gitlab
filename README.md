@@ -15,12 +15,6 @@ $gitlab->api('issues')->create($id, $params);
 GitLab::api('users')->show($id);
 ```
 
-[![Build Status](https://img.shields.io/travis/vinkla/laravel-gitlab/master.svg?style=flat)](https://travis-ci.org/vinkla/laravel-gitlab)
-[![StyleCI](https://styleci.io/repos/32235069/shield?style=flat)](https://styleci.io/repos/32235069)
-[![Coverage Status](https://img.shields.io/codecov/c/github/vinkla/laravel-gitlab.svg?style=flat)](https://codecov.io/github/vinkla/laravel-gitlab)
-[![Latest Version](https://img.shields.io/github/release/vinkla/gitlab.svg?style=flat)](https://github.com/vinkla/gitlab/releases)
-[![License](https://img.shields.io/packagist/l/vinkla/gitlab.svg?style=flat)](https://packagist.org/packages/vinkla/gitlab)
-
 ## Installation
 
 Laravel GitLab is decoupled from any library sending HTTP requests (like Guzzle), instead it uses an abstraction called [HTTPlug](http://httplug.io) which provides the http layer used to send requests to exchange rate services. This gives you the flexibility to choose what HTTP client and PSR-7 implementation you want to use.
